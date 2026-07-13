@@ -326,11 +326,10 @@ h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; l
 
 .republic-flag-display {
     width: 180px; height: 115px; border-radius: 6px; overflow: hidden;
-    border: 1px solid var(--glass-border);
-    display: flex; flex-direction: column; flex-shrink: 0;
+    border: 1px solid var(--glass-border); flex-shrink: 0;
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    background: #111; line-height: 0;
 }
-.republic-flag-display .flag-stripe { flex: 1; width: 100%; }
 
 .republic-info { flex: 1; }
 .republic-info h3 {
