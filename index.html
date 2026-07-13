@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Introductory website for a fictional Soviet-inspired Discord mock government with 30 republics." />
+  <title>Union of Thirty Republics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Union home">
+        <span class="brand-mark" aria-hidden="true">★</span>
+        <span>Union of Thirty Republics</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#republics">30 Republics</a>
+        <a href="#government">Government</a>
+        <a href="#join">Join</a>
+      </div>
+    </nav>
 
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Discord Mock Government • Alternative History</p>
+        <h1>A fictional Soviet union of <span>30 proud republics</span>.</h1>
+        <p class="hero-text">
+          Welcome to an immersive political roleplay community where citizens debate policy,
+          elect leaders, draft laws, and build a shared alternate-world socialist federation.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#join">Join the Discord</a>
+          <a class="button button-secondary" href="#about">Explore the Union</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Union statistics">
+        <div class="emblem" aria-hidden="true">☭</div>
+        <h2>People's Federation</h2>
+        <div class="stat-grid">
+          <div><strong data-count="30">0</strong><span>Republics</span></div>
+          <div><strong data-count="5">0</strong><span>Branches</span></div>
+          <div><strong data-count="1">0</strong><span>Union</span></div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">The Project</p>
+        <h2>Roleplay, diplomacy, elections, and worldbuilding.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="icon">🏛️</span>
+          <h3>Government Simulation</h3>
+          <p>Participate in ministries, councils, committees, elections, and public debates.</p>
+        </article>
+        <article class="feature-card">
+          <span class="icon">🗺️</span>
+          <h3>Alternate World</h3>
+          <p>Help shape the history, culture, economy, and foreign policy of a fictional union.</p>
+        </article>
+        <article class="feature-card">
+          <span class="icon">🤝</span>
+          <h3>Community First</h3>
+          <p>Meet other citizens, join a republic, form parties, and create memorable stories.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section republics" id="republics">
+      <div class="section-heading centered">
+        <p class="eyebrow">The Federation</p>
+        <h2>Thirty republics, one shared future.</h2>
+        <p>Each republic can develop its own identity while participating in union-wide politics.</p>
+      </div>
+      <div class="republic-counter">
+        <button id="decreaseRepublics" aria-label="Decrease displayed republic count">−</button>
+        <span><strong id="republicCount">30</strong> Republics</span>
+        <button id="increaseRepublics" aria-label="Increase displayed republic count">+</button>
+      </div>
+      <div class="republic-map" id="republicMap" aria-label="Decorative grid representing 30 republics"></div>
+    </section>
+
+    <section class="section government" id="government">
+      <div class="section-heading">
+        <p class="eyebrow">How It Works</p>
+        <h2>Pick a role and start building the state.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span>01</span>
+          <h3>Become a Citizen</h3>
+          <p>Introduce yourself, choose a republic, and receive your community role.</p>
+        </div>
+        <div class="timeline-item">
+          <span>02</span>
+          <h3>Join Politics</h3>
+          <p>Campaign for office, create a party platform, or serve in public administration.</p>
+        </div>
+        <div class="timeline-item">
+          <span>03</span>
+          <h3>Shape the Lore</h3>
+          <p>Write news, negotiate treaties, pass legislation, and define the union's future.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section join" id="join">
+      <div class="join-panel">
+        <p class="eyebrow">Enlist Today</p>
+        <h2>Ready to take your seat in the Supreme Soviet?</h2>
+        <p>Replace the placeholder link below with your Discord invite before publishing to GitHub Pages.</p>
+        <a class="button button-primary" href="https://discord.gg/your-invite" target="_blank" rel="noreferrer">Open Discord Invite</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Union of Thirty Republics. Fictional community website.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
