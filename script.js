@@ -1,63 +1,64 @@
-const year = document.querySelector('#year');
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-const republicMap = document.querySelector('#republicMap');
-const republicCount = document.querySelector('#republicCount');
-const decreaseRepublics = document.querySelector('#decreaseRepublics');
-const increaseRepublics = document.querySelector('#increaseRepublics');
+const republics = [
+    "Russian SFSR",
+    "Ukrainian SSR",
+    "Byelorussian SSR",
+    "Uzbek SSR",
+    "Kazakh SSR",
+    "Georgian SSR",
+    "Azerbaijan SSR",
+    "Lithuanian SSR",
+    "Moldavian SSR",
+    "Latvian SSR",
+    "Kirghiz SSR",
+    "Tajik SSR",
+    "Armenian SSR",
+    "Turkmen SSR",
+    "Estonian SSR",
+    "Czech SSR",
+    "Polish SSR",
+    "Slovak SSR",
+    "Hungarian SSR",
+    "Romanian SSR",
+    "Bulgarian SSR",
+    "Macedonian SSR",
+    "Kosovan SSR",
+    "Serbian SSR",
+    "Montenegrin SSR",
+    "Albanian SSR",
+    "Bosnian and Herzegovinian SSR",
+    "Croatian SSR",
+    "Slovenian SSR",
+    "East German SSR"
+];
 
-year.textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("republics-container");
 
-navToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
+    republics.forEach((republic, index) => {
+        const card = document.createElement("div");
+        card.className = "republic-card";
+        
+        // Add a staggered animation delay based on index
+        card.style.animationDelay = `${index * 0.05}s`;
+
+        card.innerHTML = `
+            <div class="republic-flag"></div>
+            <h3 class="republic-name">${republic}</h3>
+        `;
+        
+        container.appendChild(card);
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
-
-navLinks.addEventListener('click', (event) => {
-  if (event.target.tagName === 'A') {
-    navLinks.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  }
-});
-
-function animateCounters() {
-  document.querySelectorAll('[data-count]').forEach((counter) => {
-    const target = Number(counter.dataset.count);
-    let current = 0;
-    const step = Math.max(1, Math.ceil(target / 24));
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= target) {
-        current = target;
-        clearInterval(timer);
-      }
-      counter.textContent = current;
-    }, 35);
-  });
-}
-
-function renderRepublics(total = 30) {
-  republicMap.innerHTML = '';
-  republicCount.textContent = total;
-
-  for (let index = 1; index <= total; index += 1) {
-    const cell = document.createElement('div');
-    cell.className = 'republic-cell';
-    cell.textContent = String(index).padStart(2, '0');
-    cell.title = `Republic ${index}`;
-    republicMap.appendChild(cell);
-  }
-}
-
-decreaseRepublics.addEventListener('click', () => {
-  const nextTotal = Math.max(1, Number(republicCount.textContent) - 1);
-  renderRepublics(nextTotal);
-});
-
-increaseRepublics.addEventListener('click', () => {
-  const nextTotal = Math.min(30, Number(republicCount.textContent) + 1);
-  renderRepublics(nextTotal);
-});
-
-animateCounters();
-renderRepublics(30);
