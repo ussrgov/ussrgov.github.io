@@ -3,138 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supreme Soviet | Mock Government</title>
-    <!-- Google Fonts -->
+    <title>Supreme Soviet | Union of Soviet Socialist Republics</title>
+    <meta name="description" content="The official introductory portal for the Supreme Soviet mock government on Discord. Explore the 30 republics, history, and join the Union.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- CSS Grid Background overlay -->
     <div class="bg-grid"></div>
     <div class="bg-glow"></div>
 
-    <nav class="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
         <div class="logo-container">
             <div class="css-logo">
-                <div class="star"></div>
-                <div class="hammer-sickle-abstract">
-                    <div class="sickle"></div>
-                    <div class="hammer"></div>
-                </div>
+                <div class="star-shape"></div>
             </div>
             <span class="logo-text">Supreme Soviet</span>
         </div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#history">History</a>
+            <a href="#stats">Statistics</a>
             <a href="#republics">Republics</a>
-            <a href="https://discord.gg/XUcX9tgc5u" target="_blank" class="nav-btn">Join Discord</a>
+            <a href="https://discord.gg/XUcX9tgc5u" target="_blank" rel="noopener noreferrer" class="nav-btn">Join Discord</a>
         </div>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">☰</button>
     </nav>
 
+    <!-- HERO -->
     <header class="hero">
         <div class="hero-content">
+            <p class="hero-eyebrow">Союз Советских Социалистических Республик</p>
             <h1 class="hero-title">Workers of the World,<br><span class="text-highlight">Unite!</span></h1>
             <p class="hero-subtitle">
-                Welcome to the premier Soviet Mock Government on Discord. 
-                Experience a vast alternative history across 30 unified republics. 
-                Shape the destiny of the Union, lead your republic, and rise through the ranks of the Party.
+                The Union endures. Across 30 republics spanning two continents, the Soviet state 
+                stands as a testament to collective will and revolutionary spirit. 
+                Join our Discord to take part in the governance of history's greatest federation.
             </p>
             <div class="hero-actions">
-                <a href="https://discord.gg/XUcX9tgc5u" target="_blank" class="btn btn-primary">
-                    <span class="btn-text">Join the Server</span>
-                    <div class="btn-glow"></div>
+                <a href="https://discord.gg/XUcX9tgc5u" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="hero-join-btn">
+                    <span>Join the Server</span>
                 </a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
+                <a href="#about" class="btn btn-secondary">Explore the Union</a>
             </div>
         </div>
-        
-        <!-- Decorative glassmorphism elements -->
         <div class="glass-panel deco-1"></div>
         <div class="glass-panel deco-2"></div>
     </header>
 
+    <!-- ABOUT -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">The Alternative Union</h2>
+            <span class="section-label">The Union</span>
+            <h2 class="section-title">A Living Federation</h2>
             <div class="about-grid">
-                <div class="about-card glassmorphism">
+                <div class="about-card">
                     <div class="about-icon">⚖️</div>
-                    <h3>Politics & Diplomacy</h3>
-                    <p>Engage in deep political roleplay, draft legislation, and maneuver through the complex halls of the Supreme Soviet.</p>
+                    <h3>Politics &amp; Legislation</h3>
+                    <p>Draft laws, form coalitions, and debate in the Supreme Soviet. Every decision shapes the direction of the entire Union.</p>
                 </div>
-                <div class="about-card glassmorphism">
-                    <div class="about-icon">🌍</div>
-                    <h3>30 Republics</h3>
-                    <p>Our Union extends beyond the original 15, incorporating 15 new republics from Eastern Europe and the Balkans.</p>
+                <div class="about-card">
+                    <div class="about-icon">🌐</div>
+                    <h3>30 Soviet Republics</h3>
+                    <p>From Vladivostok to the Adriatic, the Union spans a vast and diverse federation of peoples, cultures, and landscapes.</p>
                 </div>
-                <div class="about-card glassmorphism">
-                    <div class="about-icon">📈</div>
-                    <h3>Economy & Military</h3>
-                    <p>Manage state resources, lead the Red Army, or direct industrial quotas in a planned economy simulation.</p>
+                <div class="about-card">
+                    <div class="about-icon">🏭</div>
+                    <h3>Economy &amp; Industry</h3>
+                    <p>Oversee state enterprises, manage five-year plans, and direct the industrial output that fuels the socialist state.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">⚔️</div>
+                    <h3>Military Command</h3>
+                    <p>Lead the Red Army and Soviet Navy, manage defense doctrine, and protect the sovereignty of the Union.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- HISTORY -->
+    <section id="history" class="section section-dark">
+        <div class="container">
+            <span class="section-label">Chronicle</span>
+            <h2 class="section-title">History of the Union</h2>
+            <p class="section-description">Key moments that forged the Soviet state into what it is today.</p>
+            <div class="timeline" id="timeline-container">
+                <!-- JS populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
     <section id="stats" class="section">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">30</div>
-                    <div class="stat-label">Unified Republics</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">500M+</div>
-                    <div class="stat-label">Citizens</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">15</div>
-                    <div class="stat-label">New Territories</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">Supreme Goal</div>
-                </div>
+            <span class="section-label">By the Numbers</span>
+            <h2 class="section-title text-center">The Union at a Glance</h2>
+            <div class="stats-grid" id="stats-container">
+                <!-- JS populated -->
             </div>
         </div>
     </section>
 
-    <section id="history" class="section">
+    <!-- REPUBLICS -->
+    <section id="republics" class="section section-dark">
         <div class="container">
-            <h2 class="section-title text-center">Our Alternative Timeline</h2>
-            <div class="history-content glassmorphism">
-                <p>In this alternative timeline, the Union did not collapse in 1991. Instead, a successful and radical reformation led to unprecedented economic and technological prosperity. This resurgence of socialist power resulted in a historic expansion across Eastern Europe and the Balkans.</p>
-                <p>Nations such as Poland, Czechoslovakia (split into Czechia and Slovakia), Hungary, Romania, Bulgaria, and the states of Yugoslavia chose to integrate into the renewed Union. Today, a total of 30 republics stand united under the red banner, forging a new path for humanity in a multipolar world.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="republics" class="section">
-        <div class="container">
+            <span class="section-label">Federation</span>
             <h2 class="section-title text-center">The 30 Republics</h2>
-            <p class="section-description text-center">A grand union stretching across Eurasia.</p>
-            
-            <div class="republics-grid" id="republics-container">
-                <!-- JS will populate the cards here -->
+            <p class="section-description text-center">Select a republic to view its profile.</p>
+            <div class="republic-explorer">
+                <div class="republic-selector-wrapper">
+                    <label for="republic-select" class="sr-only">Choose a Republic</label>
+                    <select id="republic-select" class="republic-select">
+                        <option value="" disabled selected>— Select a Republic —</option>
+                    </select>
+                </div>
+                <div class="republic-display" id="republic-display">
+                    <div class="republic-placeholder">
+                        <div class="placeholder-icon">☭</div>
+                        <p>Select a republic from the dropdown above to view its profile.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <div class="css-logo small">
-                    <div class="star"></div>
-                </div>
+                <div class="css-logo small"><div class="star-shape"></div></div>
                 <span class="logo-text">Supreme Soviet</span>
             </div>
-            <p class="footer-text">&copy; 2026 Supreme Soviet Mock Government. All rights reserved.</p>
+            <p class="footer-text">&copy; 2026 Supreme Soviet Mock Government &mdash; All rights reserved.</p>
             <div class="footer-links">
-                <a href="https://discord.gg/XUcX9tgc5u" target="_blank">Discord</a>
+                <a href="https://discord.gg/XUcX9tgc5u" target="_blank" rel="noopener noreferrer">Discord</a>
             </div>
         </div>
     </footer>
