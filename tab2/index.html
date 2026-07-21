@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Union and its Government - USSR.gov</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%239B1C1C'/><text x='50' y='54' font-size='65' fill='%23D4AF37' dominant-baseline='central' text-anchor='middle'>☭</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Playfair Display for authoritative feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        soviet: {
+                            red: '#9B1C1C',
+                            redHover: '#7F1D1D',
+                            gold: '#D4AF37',
+                            goldHover: '#F59E0B',
+                            darkBlue: '#111827',
+                            lightBg: '#F3F4F6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth transitions */
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        /* Custom scrollbar for inner content areas if needed */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
+
+    <!-- Top Official Banner -->
+    <section class="bg-gray-100 border-b border-gray-200 py-1.5 px-4 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
+            <div class="flex items-center space-x-2">
+                <!-- Red Star Flag Emoji or custom styling -->
+                <span class="text-base">🚩</span>
+                <p class="text-gray-600 font-medium">
+                    <span class="font-bold text-gray-800" data-en="An unofficial website of the Union of Soviet Socialist Republics" data-ru="Неофициальный сайт Союза Советских Социалистических Республик">An unofficial website of the Union of Soviet Socialist Republics</span>.
+                </p>
+                <button onclick="toggleHowToKnow()" class="text-blue-700 hover:text-blue-900 underline flex items-center ml-1 focus:outline-none font-semibold">
+                    <span data-en="Here's how you know" data-ru="Как это проверить">Here's how you know</span>
+                    <i class="fas fa-chevron-down ml-1 text-[10px] transition-transform duration-200" id="chevron-how"></i>
+                </button>
+            </div>
+            <div class="flex items-center space-x-2 text-gray-500">
+                <i class="fa-brands fa-discord text-indigo-500"></i>
+                <span data-en="Discord Mock Government Project" data-ru="Проект Дискорд Правительства">Discord Mock Government Project</span>
+            </div>
+        </div>
+
+        <!-- Explanatory Dropdown (USA.gov style but Sovietized) -->
+        <div id="how-to-know-box" class="hidden max-w-7xl mx-auto mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white border border-gray-200 rounded-lg shadow-inner">
+            <div class="flex items-start space-x-3">
+                <div class="bg-red-100 p-2 rounded-full text-soviet-red">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 text-sm" data-en="Official mock domains end in .su or .gov.su" data-ru="Официальные имитационные домены заканчиваются на .su или .gov.su">Official mock domains end in .su or .gov.su</h4>
+                    <p class="text-gray-600 mt-1" data-en="Our mock state organizations use dedicated Discord links and registry domains. Trust only services linked from our central Soviet hub." data-ru="Наши симуляционные государственные организации используют выделенные каналы Discord. Доверяйте только ресурсам из нашего центрального хаба.">Our mock state organizations use dedicated Discord links and registry domains. Trust only services linked from our central Soviet hub.</p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-3">
+                <div class="bg-red-100 p-2 rounded-full text-soviet-red">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 text-sm" data-en="Secure connections run through our Discord hierarchy" data-ru="Безопасные соединения проходят через иерархию Дискорда">Secure connections run through our Discord hierarchy</h4>
+                    <p class="text-gray-600 mt-1" data-en="The lock icon or safe links ensure you are communicating directly with registered State ministers." data-ru="Значок замка или надежные ссылки гарантируют, что вы общаетесь напрямую с зарегистрированными государственными министрами.">The lock icon or safe links ensure you are communicating directly with registered State ministers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Header -->
+    <header class="bg-white border-b border-gray-200 py-4 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            <!-- Left: Logo & Title -->
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="bg-soviet-red hover:bg-red-700 transition-all p-3 rounded-full shadow-lg flex items-center justify-center w-14 h-14 border-2 border-soviet-gold cursor-pointer">
+                    <svg class="w-8 h-8 text-soviet-gold fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.5l-2.5-1.5-2.5 1.5.7-2.9-2.2-1.9 3-.3 1.3-2.8 1.3 2.8 3 .3-2.2 1.9.7 2.9zm.68-6.1c-.24-.22-.55-.38-.93-.45-.3-.05-.62-.05-.93.02l-.63-.63c.69-.53 1.57-.75 2.45-.58.74.14 1.4.52 1.86 1.08l-1.82.56zm-1.89.96c-.46-.3-.79-.75-.92-1.28l1.83-.56c.07.25.21.46.42.61l-1.33 1.23zm-.74 1.35c-.17-.11-.32-.24-.46-.38l.63-.63c.12.11.24.21.38.28l-.55.73zm4.56-4.56l-5.61 5.61c-.53.53-1.23.82-1.98.82-.75 0-1.45-.29-1.98-.82s-.82-1.23-.82-1.98c0-.75.29-1.45.82-1.98l5.61-5.61 3.96 3.96z"/>
+                    </svg>
+                </a>
+                <div>
+                    <a href="index.html" class="flex items-center space-x-1 hover:opacity-80 transition-opacity">
+                        <span class="font-serif text-3xl font-bold tracking-tight text-soviet-red">ussr</span>
+                        <span class="font-sans text-3xl font-light tracking-tight text-gray-700">.gov</span>
+                    </a>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold" data-en="The Union's Official Mock Portal" data-ru="Официальный Имитационный Портал Союза">The Union's Official Mock Portal</p>
+                </div>
+            </div>
+
+            <!-- Right: Interactive contact, language toggle, and mock search -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+                <div class="text-center sm:text-right text-xs bg-red-50 p-3 rounded-lg border border-red-100 flex items-center space-x-3 shadow-sm w-full sm:w-auto">
+                    <div class="bg-soviet-red text-white p-2 rounded-full flex items-center justify-center w-8 h-8">
+                        <i class="fa-solid fa-headset text-sm"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-bold text-gray-700" data-en="Need Assistance?" data-ru="Нужна Помощь?">Need Assistance?</p>
+                        <p class="text-soviet-red font-semibold cursor-pointer hover:underline" onclick="triggerSovietAlert('Support Ticket Bureau', 'To ask questions or report concerns, please head to the Discord Server and locate the #support channel to create an official Citizen Ticket. Our active ministers will handle your request promptly.')" data-en="Create a ticket in the server" data-ru="Создайте тикет на сервере">Create a ticket in the server</p>
+                    </div>
+                </div>
+
+                <button id="langBtn" onclick="toggleLanguage()" class="bg-soviet-darkBlue hover:bg-gray-800 text-white font-bold py-2 px-4 rounded text-xs tracking-wider uppercase transition-all shadow-md border-b-2 border-soviet-gold flex items-center space-x-1">
+                    <i class="fas fa-globe"></i>
+                    <span>Русский</span>
+                </button>
+
+                <div class="relative w-full sm:w-64">
+                    <input id="search-input" type="text" placeholder="Search USSR.gov..." class="w-full pl-3 pr-10 py-2 border-2 border-gray-300 rounded focus:outline-none focus:border-soviet-red text-sm transition-all shadow-inner" onkeypress="handleSearch(event)">
+                    <button onclick="performSearch()" class="absolute right-0 top-0 h-full px-3 text-white bg-soviet-red hover:bg-soviet-redHover rounded-r transition-all">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-soviet-red text-white shadow-md relative z-10">
+        <div class="max-w-7xl mx-auto overflow-x-auto scrollbar-hide">
+            <ul class="flex whitespace-nowrap text-sm font-semibold border-t border-red-700">
+                <li>
+                    <a href="index.html" class="inline-block py-4 px-5 hover:bg-soviet-redHover border-r border-red-800 transition-all" data-en="Home" data-ru="Главная">Home</a>
+                </li>
+                <li>
+                    <a href="#" onclick="triggerSovietAlert('All topics & services', 'Browse state archives, citizen work assignments, allocation indexes, and official Soviet edicts.')" class="inline-block py-4 px-5 hover:bg-soviet-redHover border-r border-red-800 transition-all" data-en="All topics and services" data-ru="Все темы и услуги">All topics and services</a>
+                </li>
+                <!-- Active Link Styling applied here -->
+                <li>
+                    <a href="union_government.html" class="inline-block py-4 px-5 bg-soviet-redHover border-r border-red-800 transition-all text-soviet-gold font-bold border-b-4 border-soviet-gold" data-en="The Union and its government" data-ru="Союз и его правительство">The Union and its government</a>
+                </li>
+                <li>
+                    <a href="#" onclick="triggerSovietAlert('State Allocations', 'View standard food provisions, communal housing allocations, and merit-based awards.')" class="inline-block py-4 px-5 hover:bg-soviet-redHover border-r border-red-800 transition-all" data-en="State benefits" data-ru="Государственные пособия">State benefits</a>
+                </li>
+                <li>
+                    <a href="#" onclick="triggerSovietAlert('Soviet Citizenship', 'Register yourself as a registered worker of the state, undergo party review, and check naturalization status.')" class="inline-block py-4 px-5 hover:bg-soviet-redHover border-r border-red-800 transition-all" data-en="Immigration and Soviet citizenship" data-ru="Иммиграция и гражданство СССР">Immigration and Soviet citizenship</a>
+                </li>
+                <li>
+                    <a href="#" onclick="triggerSovietAlert('Economy & Rubles', 'Track industrial indices, agricultural yields, and collective commerce data under the state planning committee (Gosplan).')" class="inline-block py-4 px-5 hover:bg-soviet-redHover border-r border-red-800 transition-all" data-en="Economy and Rubles" data-ru="Экономика и Рубли">Economy and Rubles</a>
+                </li>
+                <li>
+                    <a href="#" onclick="triggerSovietAlert('Labor Registry', 'Every citizen has the right and duty to perform collective labor. Explore state industries.')" class="inline-block py-4 px-5 hover:bg-soviet-redHover border-r border-red-800 transition-all" data-en="Labor" data-ru="Труд">Labor</a>
+                </li>
+                <li>
+                    <a href="#" onclick="triggerSovietAlert('Internal Permits', 'Apply for exit visas, regional passes, and capital-city residence permissions.')" class="inline-block py-4 px-5 hover:bg-soviet-redHover transition-all" data-en="Travel" data-ru="Поездки">Travel</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-2 text-xs text-gray-500">
+            <a href="index.html" class="hover:text-soviet-red hover:underline" data-en="Home" data-ru="Главная">Home</a> 
+            <span class="mx-2">›</span>
+            <span class="text-gray-800 font-semibold" data-en="The Union and its government" data-ru="Союз и его правительство">The Union and its government</span>
+        </div>
+    </div>
+
+    <!-- Page Header (Sub-Hero) -->
+    <section class="bg-soviet-darkBlue border-b-4 border-soviet-gold py-12 px-4 md:px-8 relative overflow-hidden">
+        <!-- Subtle Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#D4AF37 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-grow">
+                <h1 class="font-serif text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight" data-en="Structure of the Soviet State" data-ru="Структура Советского Государства">
+                    Structure of the Soviet State
+                </h1>
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed max-w-3xl" data-en="Understanding the administrative hierarchy, democratic centralism, and operational branches of the Union of Soviet Socialist Republics. This page outlines how our mock government is organized, managed, and executed within the server." data-ru="Понимание административной иерархии, демократического централизма и оперативных ветвей Союза Советских Социалистических Республик. На этой странице описывается, как организовано и управляется наше имитационное правительство на сервере.">
+                    Understanding the administrative hierarchy, democratic centralism, and operational branches of the Union of Soviet Socialist Republics. This page outlines how our mock government is organized, managed, and executed within the server.
+                </p>
+            </div>
+            <div class="hidden md:block flex-shrink-0 opacity-80">
+                <i class="fas fa-landmark text-8xl text-soviet-red border-4 border-soviet-red rounded-full p-6 bg-white/5"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-12 flex-grow w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Left Column: Detailed Information Sections -->
+            <div class="lg:col-span-2 space-y-12">
+                
+                <!-- Section 1: The Supreme Soviet -->
+                <section class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 relative">
+                    <div class="absolute top-0 right-0 bg-red-50 text-soviet-red font-bold text-[10px] px-3 py-1 rounded-bl-xl uppercase tracking-widest border-b border-l border-red-100" data-en="Legislative Branch" data-ru="Законодательная Власть">Legislative Branch</div>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-soviet-red text-white p-3 rounded-lg shadow-inner">
+                            <i class="fas fa-building-columns text-xl"></i>
+                        </div>
+                        <h2 class="font-serif text-2xl font-bold text-gray-900" data-en="The Supreme Soviet of the USSR" data-ru="Верховный Совет СССР">The Supreme Soviet of the USSR</h2>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4" data-en="The Supreme Soviet is the highest legislative body in the Soviet Union and the sole organ authorized to amend the Constitution. Within our mock government simulation, it serves as the ultimate voting body for server-wide rules, budget allocations (Rubles), and party directives." data-ru="Верховный Совет является высшим законодательным органом в Советском Союзе и единственным органом, уполномоченным вносить поправки в Конституцию. В нашей симуляции он служит высшим органом голосования по правилам сервера и распределению бюджета.">
+                        The Supreme Soviet is the highest legislative body in the Soviet Union and the sole organ authorized to amend the Constitution. Within our mock government simulation, it serves as the ultimate voting body for server-wide rules, budget allocations (Rubles), and party directives.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                        <div class="bg-gray-50 p-4 border border-gray-200 rounded-lg">
+                            <h3 class="font-bold text-sm text-soviet-red mb-2" data-en="Soviet of the Union" data-ru="Совет Союза">Soviet of the Union</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed" data-en="Elected by citizens on the basis of population districts. Represents the general interests of all citizens regardless of nationality." data-ru="Избирается гражданами на основе избирательных округов. Представляет общие интересы всех граждан независимо от национальности.">Elected by citizens on the basis of population districts. Represents the general interests of all citizens regardless of nationality.</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 border border-gray-200 rounded-lg">
+                            <h3 class="font-bold text-sm text-soviet-red mb-2" data-en="Soviet of Nationalities" data-ru="Совет Национальностей">Soviet of Nationalities</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed" data-en="Elected to represent the specific administrative divisions (Republics, Autonomous Oblasts) to ensure fair representation of all cultures." data-ru="Избирается для представления административных единиц, чтобы обеспечить справедливое представительство всех культур.">Elected to represent the specific administrative divisions (Republics, Autonomous Oblasts) to ensure fair representation of all cultures.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 border-l-4 border-soviet-gold pl-4 py-2 bg-yellow-50/50">
+                        <h4 class="font-bold text-sm text-gray-800" data-en="The Presidium" data-ru="Президиум">The Presidium</h4>
+                        <p class="text-xs text-gray-600 mt-1" data-en="When the Supreme Soviet is not in active session, the Presidium acts on its behalf, carrying out administrative decrees and managing Discord server disputes." data-ru="Когда Верховный Совет не заседает, Президиум действует от его имени, издавая указы и разрешая споры на сервере Discord.">When the Supreme Soviet is not in active session, the Presidium acts on its behalf, carrying out administrative decrees and managing Discord server disputes.</p>
+                    </div>
+                </section>
+
+                <!-- Section 2: Council of Ministers -->
+                <section class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 relative">
+                    <div class="absolute top-0 right-0 bg-blue-50 text-blue-800 font-bold text-[10px] px-3 py-1 rounded-bl-xl uppercase tracking-widest border-b border-l border-blue-100" data-en="Executive Branch" data-ru="Исполнительная Власть">Executive Branch</div>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-soviet-darkBlue text-white p-3 rounded-lg shadow-inner">
+                            <i class="fas fa-briefcase text-xl"></i>
+                        </div>
+                        <h2 class="font-serif text-2xl font-bold text-gray-900" data-en="The Council of Ministers" data-ru="Совет Министров">The Council of Ministers</h2>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4" data-en="Acting as the highest executive and administrative organ of state power, the Council of Ministers (formerly Sovnarkom) manages the day-to-day operations of the economy, military, and internal affairs. Ministers are appointed leaders in our Discord server who manage specific channels and roleplay sectors." data-ru="Действуя как высший исполнительный орган государственной власти, Совет Министров управляет повседневными операциями экономики, вооруженных сил и внутренних дел. Министры — это назначенные лидеры на нашем сервере Discord.">
+                        Acting as the highest executive and administrative organ of state power, the Council of Ministers (formerly Sovnarkom) manages the day-to-day operations of the economy, military, and internal affairs. Ministers are appointed leaders in our Discord server who manage specific channels and roleplay sectors.
+                    </p>
+                    
+                    <h3 class="font-bold text-sm text-gray-800 mb-3 border-b pb-2" data-en="Key Ministries (Active Server Departments)" data-ru="Ключевые Министерства (Активные Отделы Сервера)">Key Ministries (Active Server Departments)</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-industry text-soviet-red mt-1"></i>
+                            <div>
+                                <span class="font-bold text-sm text-gray-900" data-en="Gosplan (State Planning Committee):" data-ru="Госплан (Комитет Госпланирования):">Gosplan (State Planning Committee):</span>
+                                <span class="text-xs text-gray-600 block mt-0.5" data-en="Dictates production quotas, manages the bot economy, and prices state goods." data-ru="Диктует квоты на производство, управляет экономикой бота и ценами на товары.">Dictates production quotas, manages the bot economy, and prices state goods.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-shield-cat text-soviet-red mt-1"></i>
+                            <div>
+                                <span class="font-bold text-sm text-gray-900" data-en="KGB (Committee for State Security):" data-ru="КГБ (Комитет Государственной Безопасности):">KGB (Committee for State Security):</span>
+                                <span class="text-xs text-gray-600 block mt-0.5" data-en="The server moderation team. Handles rule violations, alternative account sweeps, and server security." data-ru="Команда модерации сервера. Обрабатывает нарушения правил и безопасность сервера.">The server moderation team. Handles rule violations, alternative account sweeps, and server security.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-tractor text-soviet-red mt-1"></i>
+                            <div>
+                                <span class="font-bold text-sm text-gray-900" data-en="Ministry of Agriculture & Labor:" data-ru="Министерство Сельского Хозяйства и Труда:">Ministry of Agriculture & Labor:</span>
+                                <span class="text-xs text-gray-600 block mt-0.5" data-en="Assigns new server members their starting roles and tracks weekly activity metrics." data-ru="Назначает новым участникам сервера их начальные роли и отслеживает активность.">Assigns new server members their starting roles and tracks weekly activity metrics.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Section 3: The Communist Party -->
+                <section class="bg-red-50 p-8 rounded-xl shadow-sm border border-red-200 relative overflow-hidden">
+                    <!-- Faint background emblem -->
+                    <i class="fas fa-star absolute -bottom-10 -right-10 text-9xl text-red-100 opacity-50 transform rotate-12"></i>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="bg-soviet-gold text-soviet-red p-3 rounded-full shadow-md w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-users text-xl"></i>
+                            </div>
+                            <h2 class="font-serif text-2xl font-bold text-gray-900" data-en="The Vanguard: The Communist Party" data-ru="Авангард: Коммунистическая Партия">The Vanguard: The Communist Party</h2>
+                        </div>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4" data-en="The Communist Party of the Soviet Union (CPSU) is the sole ruling party and the guiding force of Soviet society. While government organs handle administration, the Party provides ideological direction and approves all major state appointments." data-ru="Коммунистическая партия Советского Союза (КПСС) — единственная правящая партия и руководящая сила советского общества. В то время как государственные органы занимаются администрацией, Партия обеспечивает идеологическое направление.">
+                            The Communist Party of the Soviet Union (CPSU) is the sole ruling party and the guiding force of Soviet society. While government organs handle administration, the Party provides ideological direction and approves all major state appointments.
+                        </p>
+                        <div class="bg-white p-5 rounded-lg border border-red-100 mt-4 shadow-sm">
+                            <h3 class="font-bold text-sm text-soviet-red mb-2" data-en="The Politburo & Central Committee" data-ru="Политбюро и Центральный Комитет">The Politburo & Central Committee</h3>
+                            <p class="text-xs text-gray-600 leading-relaxed" data-en="The Central Committee is the highest body of the Party between Congresses. Its inner circle, the Politburo (composed of the server's head Administrators/Founders), makes the ultimate executive decisions regarding server direction, lore, and high-level roleplay events." data-ru="Центральный Комитет — высший орган Партии между съездами. Его внутренний круг, Политбюро (состоящее из главных администраторов сервера), принимает окончательные исполнительные решения.">
+                                The Central Committee is the highest body of the Party between Congresses. Its inner circle, the Politburo (composed of the server's head Administrators/Founders), makes the ultimate executive decisions regarding server direction, lore, and high-level roleplay events.
+                            </p>
+                            <button onclick="triggerSovietAlert('Party Membership', 'Applications to join the CPSU require a level 10 activity rank and a clean disciplinary record. Check the #party-headquarters channel.')" class="mt-4 bg-transparent hover:bg-red-50 text-soviet-red border border-soviet-red font-bold py-1.5 px-4 rounded text-xs uppercase tracking-wider transition-all">
+                                <span data-en="Inquire about Party Membership" data-ru="Узнать о членстве в Партии">Inquire about Party Membership</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Republics -->
+                <section class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-emerald-700 text-white p-3 rounded-lg shadow-inner">
+                            <i class="fas fa-map-location-dot text-xl"></i>
+                        </div>
+                        <h2 class="font-serif text-2xl font-bold text-gray-900" data-en="Union Republics & Local Soviets" data-ru="Союзные Республики и Местные Советы">Union Republics & Local Soviets</h2>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4" data-en="The USSR is a federal state consisting of 15 supposedly voluntary Union Republics. In our server environment, these Republics act as distinct roleplay hubs or categories, each with its own local governance, chat channels, and industrial focus." data-ru="СССР — это федеративное государство, состоящее из 15 союзных республик. В нашей серверной среде эти Республики действуют как отдельные ролевые центры или категории, каждая со своим собственным местным управлением.">
+                        The USSR is a federal state consisting of 15 supposedly voluntary Union Republics. In our server environment, these Republics act as distinct roleplay hubs or categories, each with its own local governance, chat channels, and industrial focus.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs mt-4">
+                        <div class="p-2 border border-gray-100 rounded text-center bg-gray-50 text-gray-700 font-medium">Russian SFSR</div>
+                        <div class="p-2 border border-gray-100 rounded text-center bg-gray-50 text-gray-700 font-medium">Ukrainian SSR</div>
+                        <div class="p-2 border border-gray-100 rounded text-center bg-gray-50 text-gray-700 font-medium">Byelorussian SSR</div>
+                        <div class="p-2 border border-gray-100 rounded text-center bg-gray-50 text-gray-700 font-medium">Uzbek SSR</div>
+                        <div class="p-2 border border-gray-100 rounded text-center bg-gray-50 text-gray-700 font-medium">Kazakh SSR</div>
+                        <div class="p-2 border border-gray-100 rounded text-center bg-gray-50 text-gray-700 font-medium cursor-pointer hover:bg-gray-200" onclick="triggerSovietAlert('Republic Archives', 'View the full list of 15 republics in the state registry.')">
+                            <i class="fas fa-ellipsis-h text-gray-400"></i> <span data-en="View All" data-ru="Показать все">View All</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Sidebar (Citizen Actions & Contacts) -->
+            <div class="space-y-8">
+                
+                <!-- Quick Actions Block -->
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                    <h3 class="font-serif text-lg font-bold text-gray-800 border-b pb-2 mb-4 flex items-center space-x-2">
+                        <i class="fas fa-clipboard-check text-soviet-red"></i>
+                        <span data-en="Citizen Actions" data-ru="Действия Гражданина">Citizen Actions</span>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <button onclick="triggerSovietAlert('Electoral Commission', 'Next Supreme Soviet elections are scheduled for late autumn. Ensure your registration is current.')" class="w-full text-left p-3 rounded bg-gray-50 hover:bg-red-50 hover:text-soviet-red hover:border-red-200 border border-transparent transition-all flex items-center justify-between group">
+                                <span class="text-sm font-semibold text-gray-700 group-hover:text-soviet-red" data-en="Register to Vote" data-ru="Регистрация для голосования">Register to Vote</span>
+                                <i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="triggerSovietAlert('Ministry of Labor', 'View the open vacancies in the Central Committee Administration or Local Ministries.')" class="w-full text-left p-3 rounded bg-gray-50 hover:bg-red-50 hover:text-soviet-red hover:border-red-200 border border-transparent transition-all flex items-center justify-between group">
+                                <span class="text-sm font-semibold text-gray-700 group-hover:text-soviet-red" data-en="Apply for a Ministry Job" data-ru="Заявка на работу в Министерстве">Apply for a Ministry Job</span>
+                                <i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="triggerSovietAlert('Supreme Court', 'Submit a formal grievance against a state official or report a violation of server lore/rules.')" class="w-full text-left p-3 rounded bg-gray-50 hover:bg-red-50 hover:text-soviet-red hover:border-red-200 border border-transparent transition-all flex items-center justify-between group">
+                                <span class="text-sm font-semibold text-gray-700 group-hover:text-soviet-red" data-en="File a Public Grievance" data-ru="Подать публичную жалобу">File a Public Grievance</span>
+                                <i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Info Callout Box (Soviet Constitution) -->
+                <div class="bg-soviet-darkBlue text-white rounded-xl p-6 shadow-md border-b-4 border-soviet-gold relative overflow-hidden">
+                    <i class="fas fa-book absolute -bottom-4 -right-4 text-6xl text-white/10 transform -rotate-12"></i>
+                    <h2 class="font-serif text-lg font-bold text-soviet-gold mb-3 flex items-center space-x-2 relative z-10">
+                        <span data-en="The Constitution" data-ru="Конституция">The Constitution</span>
+                    </h2>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4 relative z-10" data-en="The Fundamental Law of the Union of Soviet Socialist Republics guarantees the rights of our mock citizens, outlines server rules, and establishes the bounds of roleplay conduct." data-ru="Основной Закон Союза Советских Социалистических Республик гарантирует права наших имитационных граждан и устанавливает правила сервера.">
+                        The Fundamental Law of the Union of Soviet Socialist Republics guarantees the rights of our mock citizens, outlines server rules, and establishes the bounds of roleplay conduct.
+                    </p>
+                    <button onclick="triggerSovietAlert('State Archives', 'The Constitution document is pinned in the #rules-and-info channel on Discord.')" class="bg-soviet-gold hover:bg-yellow-500 text-soviet-darkBlue font-bold py-2 px-4 rounded text-xs uppercase tracking-wider transition-all w-full relative z-10">
+                        <span data-en="Read the Document" data-ru="Читать Документ">Read the Document</span>
+                    </button>
+                </div>
+
+                <!-- Ministry Contact List -->
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                    <h3 class="font-serif text-lg font-bold text-gray-800 border-b pb-2 mb-4" data-en="Contacting Officials" data-ru="Связь с чиновниками">Contacting Officials</h3>
+                    <p class="text-xs text-gray-500 mb-4" data-en="Need to ping a specific government branch? Use these Discord role prefixes in the #support channel:" data-ru="Нужно связаться с определенной ветвью власти? Используйте эти префиксы ролей в Discord:">
+                        Need to ping a specific government branch? Use these Discord role prefixes in the #support channel:
+                    </p>
+                    <ul class="text-xs space-y-3 text-gray-700">
+                        <li class="flex justify-between items-center bg-gray-50 p-2 rounded border border-gray-100">
+                            <span class="font-mono bg-gray-200 px-1.5 py-0.5 rounded text-indigo-600">@Sovnarkom</span>
+                            <span class="text-gray-500 text-[10px] uppercase" data-en="Ministers" data-ru="Министры">Ministers</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-gray-50 p-2 rounded border border-gray-100">
+                            <span class="font-mono bg-gray-200 px-1.5 py-0.5 rounded text-red-600">@Politburo</span>
+                            <span class="text-gray-500 text-[10px] uppercase" data-en="Admins" data-ru="Админы">Admins</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-gray-50 p-2 rounded border border-gray-100">
+                            <span class="font-mono bg-gray-200 px-1.5 py-0.5 rounded text-blue-600">@KGB_Officer</span>
+                            <span class="text-gray-500 text-[10px] uppercase" data-en="Moderators" data-ru="Модераторы">Moderators</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-soviet-darkBlue text-white mt-auto">
+        
+        <!-- Top Colored Border -->
+        <div class="h-2 bg-gradient-to-r from-soviet-red via-soviet-gold to-soviet-red"></div>
+
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <!-- Column 1: About Mock Gov -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <span class="font-serif text-2xl font-bold tracking-tight text-soviet-red">ussr</span>
+                    <span class="font-sans text-2xl font-light tracking-tight text-gray-400">.gov</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed" data-en="This is an online, fully immersive roleplay website created strictly for mock-government entertainment on Discord. We are in no way affiliated with historical, real-world, or modern political organizations." data-ru="Это полностью погружающий ролевой веб-сайт, созданный исключительно для развлечения в рамках игрового правительства в Discord. Мы никоим пор не связаны с реальными историческими или современными политическими организациями.">
+                    This is an online, fully immersive roleplay website created strictly for mock-government entertainment on Discord. We are in no way affiliated with historical, real-world, or modern political organizations.
+                </p>
+            </div>
+
+            <!-- Column 2: Government Links (Mock) -->
+            <div>
+                <h4 class="font-bold text-sm text-soviet-gold uppercase tracking-wider mb-4" data-en="Government Agencies" data-ru="Правительственные Ведомства">Government Agencies</h4>
+                <ul class="space-y-2.5 text-xs text-gray-300">
+                    <li><a href="#" onclick="triggerSovietAlert('Ministry of Labor', 'The labor division regulates citizen registry and job assignments.')" class="hover:underline hover:text-white" data-en="Ministry of Labor" data-ru="Министерство Труда">Ministry of Labor</a></li>
+                    <li><a href="#" onclick="triggerSovietAlert('Ministry of Defense', 'The military division manages recruit training and unit divisions.')" class="hover:underline hover:text-white" data-en="Ministry of Defense" data-ru="Министерство Обороны">Ministry of Defense</a></li>
+                    <li><a href="#" onclick="triggerSovietAlert('State Planning Bureau', 'Gosplan manages economic targets, quotas, and ruble values.')" class="hover:underline hover:text-white" data-en="Gosplan (State Planning Committee)" data-ru="Госплан (Комитет Госпланирования)">Gosplan (State Planning Committee)</a></li>
+                    <li><a href="#" onclick="triggerSovietAlert('Ministry of Justice', 'Monitors rule compliance across all server channels and forums.')" class="hover:underline hover:text-white" data-en="Supreme Court of the Union" data-ru="Верховный Суд Союза">Supreme Court of the Union</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Citizen Resources (Mock) -->
+            <div>
+                <h4 class="font-bold text-sm text-soviet-gold uppercase tracking-wider mb-4" data-en="Citizen Resources" data-ru="Ресурсы Гражданина">Citizen Resources</h4>
+                <ul class="space-y-2.5 text-xs text-gray-300">
+                    <li><a href="#" onclick="triggerSovietAlert('Internal Archives', 'Read past resolutions and party consensus declarations.')" class="hover:underline hover:text-white" data-en="State Resolutions" data-ru="Постановления Государства">State Resolutions</a></li>
+                    <li><a href="#" onclick="triggerSovietAlert('Public Complaints', 'Citizens can submit constructive industrial optimization ideas directly in the Discord server.')" class="hover:underline hover:text-white" data-en="Submit a Public Petition" data-ru="Подать народную петицию">Submit a Public Petition</a></li>
+                    <li><a href="#" onclick="triggerSovietAlert('Elections', 'Voting registrations occur during planned electoral quarters.')" class="hover:underline hover:text-white" data-en="Electoral Registries" data-ru="Реестры Избирателей">Electoral Registries</a></li>
+                    <li><a href="#" onclick="triggerSovietAlert('Labor Medals', 'Earn points and medals for exceptional administrative duties.')" class="hover:underline hover:text-white" data-en="Honors and Merits" data-ru="Награды и Заслуги">Honors and Merits</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Discord Ticket System -->
+            <div class="space-y-4">
+                <h4 class="font-bold text-sm text-soviet-gold uppercase tracking-wider mb-4" data-en="Need Questions Answered?" data-ru="Есть Вопросы?">Need Questions Answered?</h4>
+                <p class="text-xs text-gray-400" data-en="Our administrative staff is ready to assist you. Simply enter your inquiry or create a ticket via our automated systems." data-ru="Наш административный персонал готов помочь вам. Просто отправьте запрос или создайте тикет через наши автоматизированные системы.">
+                    Our administrative staff is ready to assist you. Simply enter your inquiry or create a ticket via our automated systems.
+                </p>
+                <div class="bg-slate-800 p-3 rounded-lg border border-slate-700 flex flex-col space-y-2">
+                    <span class="text-[10px] text-gray-400 font-bold uppercase" data-en="Official Support Channel" data-ru="Официальный Канал Поддержки">Official Support Channel</span>
+                    <button onclick="triggerSovietAlert('Ticket Bureau', 'For support, navigate to the Discord Server and open an active ticket!')" class="bg-soviet-red hover:bg-soviet-redHover text-white text-xs font-bold py-2 px-3 rounded flex items-center justify-center space-x-1.5 transition-all">
+                        <i class="fa-solid fa-ticket-simple"></i>
+                        <span data-en="Create Discord Support Ticket" data-ru="Создать тикет поддержки">Create Discord Support Ticket</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Disclaimer and Copyright -->
+        <div class="bg-black/40 py-6 px-4 text-center text-xs text-gray-500 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+                <p data-en="© 2026 USSR.gov - Government of the Soviet Union. All revolutionary simulated rights reserved." data-ru="© 2026 СССР.gov - Правительство Советского Союза. Все революционные симуляционные права защищены.">
+                    © 2026 USSR.gov - Government of the Soviet Union. All revolutionary simulated rights reserved.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" onclick="triggerSovietAlert('Privacy Policy', 'Your mock data inside this simulation is managed by server rules and standard platform policy. No actual personal info is stored.')" class="hover:underline hover:text-gray-300" data-en="Privacy Policy" data-ru="Политика конфиденциальности">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#" onclick="triggerSovietAlert('Terms of Service', 'By participating in our mock government simulation, you agree to treat comrade players with respect and adhere to Discord Community Guidelines.')" class="hover:underline hover:text-gray-300" data-en="Terms of Revolutionary Conduct" data-ru="Правила революционного поведения">Terms of Revolutionary Conduct</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Themed Revolutionary Modal (Alternative to native alert) -->
+    <div id="soviet-modal" class="fixed inset-0 bg-black/75 flex items-center justify-center z-50 p-4 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white border-2 border-soviet-gold rounded-xl shadow-2xl max-w-md w-full overflow-hidden transform scale-95 transition-transform duration-300" id="modal-card">
+            
+            <!-- Red & Gold Banner Header -->
+            <div class="bg-soviet-red text-white p-5 flex items-center justify-between border-b-4 border-soviet-gold">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-soviet-gold text-soviet-red p-2 rounded-full flex items-center justify-center w-8 h-8">
+                        <i class="fa-solid fa-star text-sm"></i>
+                    </div>
+                    <h3 id="modal-title" class="font-serif text-lg font-bold tracking-wide">Government Office</h3>
+                </div>
+                <button onclick="closeSovietAlert()" class="text-white hover:text-soviet-gold transition-all text-lg focus:outline-none">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6">
+                <div class="flex justify-center mb-4">
+                    <div class="text-5xl text-soviet-red animate-bounce">
+                        <i class="fas fa-hammer"></i> <i class="fas fa-sickle"></i>
+                    </div>
+                </div>
+                <p id="modal-message" class="text-gray-700 text-sm leading-relaxed text-center font-medium">
+                    Please await assignment, Comrade.
+                </p>
+                
+                <div class="mt-4 p-3 bg-red-50 rounded-lg border border-red-100 text-[11px] text-gray-500 text-center leading-relaxed">
+                    <span class="font-bold text-soviet-red uppercase" data-en="Important Notice:" data-ru="Важное Уведомление:">Important Notice:</span> 
+                    <span data-en="This section is currently under development. Please open a support ticket in the Discord server to complete your registration." data-ru="Этот раздел находится в разработке. Пожалуйста, откройте тикет поддержки на сервере Discord для завершения регистрации.">This section is currently under development. Please open a support ticket in the Discord server to complete your registration.</span>
+                </div>
+            </div>
+
+            <!-- Modal Buttons -->
+            <div class="bg-gray-100 px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-2">
+                <button onclick="closeSovietAlert()" class="w-full sm:w-auto bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-6 rounded text-xs uppercase tracking-wider transition-all" data-en="Acknowledged, Comrade" data-ru="Понятно, Товарищ">
+                    Acknowledged, Comrade
+                </button>
+                <button onclick="openMockDiscordTicket()" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded text-xs uppercase tracking-wider transition-all flex items-center justify-center space-x-1">
+                    <i class="fa-brands fa-discord"></i>
+                    <span data-en="Open Support Ticket" data-ru="Открыть Тикет">Open Support Ticket</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script>
+        // Track the current active language (en/ru)
+        let currentLang = 'en';
+
+        // Function to toggle the "Here's how you know" accordion
+        function toggleHowToKnow() {
+            const box = document.getElementById('how-to-know-box');
+            const chevron = document.getElementById('chevron-how');
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                chevron.classList.add('rotate-180');
+            } else {
+                box.classList.add('hidden');
+                chevron.classList.remove('rotate-180');
+            }
+        }
+
+        // Toggle page language dynamically for immersion
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ru' : 'en';
+            
+            // Toggle text on lang button
+            const langBtnSpan = document.querySelector('#langBtn span');
+            langBtnSpan.textContent = currentLang === 'en' ? 'Русский' : 'English';
+
+            // Find all elements with translation keys
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const enText = el.getAttribute('data-en');
+                const ruText = el.getAttribute('data-ru');
+                el.textContent = currentLang === 'en' ? enText : ruText;
+            });
+
+            // Adjust search input placeholder
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                searchInput.placeholder = currentLang === 'en' ? 'Search USSR.gov...' : 'Поиск по сайту СССР.gov...';
+            }
+        }
+
+        // Trigger our customized Red & Gold notification modal
+        function triggerSovietAlert(title, message) {
+            const modal = document.getElementById('soviet-modal');
+            const card = document.getElementById('modal-card');
+            const titleEl = document.getElementById('modal-title');
+            const messageEl = document.getElementById('modal-message');
+
+            titleEl.textContent = title;
+            messageEl.textContent = message;
+
+            // Make modal active
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                card.classList.remove('scale-95');
+                card.classList.add('scale-100');
+            }, 10);
+        }
+
+        // Close our modal
+        function closeSovietAlert() {
+            const modal = document.getElementById('soviet-modal');
+            const card = document.getElementById('modal-card');
+
+            modal.classList.add('opacity-0');
+            card.classList.add('scale-95');
+            card.classList.remove('scale-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close modal when clicking background
+        document.getElementById('soviet-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSovietAlert();
+            }
+        });
+
+        // Search trigger helper
+        function handleSearch(event) {
+            if (event.key === 'Enter') {
+                performSearch();
+            }
+        }
+
+        // Perform mock search
+        function performSearch() {
+            const query = document.getElementById('search-input').value.trim();
+            if (query === "") {
+                triggerSovietAlert(
+                    currentLang === 'en' ? 'Search Bureau' : 'Бюро поисковых запросов', 
+                    currentLang === 'en' ? 'Please enter a search query before submitting.' : 'Пожалуйста, введите запрос перед отправкой.'
+                );
+            } else {
+                triggerSovietAlert(
+                    currentLang === 'en' ? 'Search Result' : 'Результаты поиска', 
+                    currentLang === 'en' ? `No registered matches were found for "${query}" in our local archive vaults. Try consulting the #support office.` : `Не найдено совпадений по вашему запросу "${query}" в архивах государственной безопасности.`
+                );
+            }
+        }
+
+        // Discord open helper for the modal
+        function openMockDiscordTicket() {
+            closeSovietAlert();
+            setTimeout(() => {
+                triggerSovietAlert(
+                    currentLang === 'en' ? 'Discord Link Copy' : 'Копирование ссылки', 
+                    currentLang === 'en' ? 'To connect with administrators, look up the designated active ticket launcher or invite link inside your Discord client app directly.' : 'Для связи с администраторами откройте Дискорд и воспользуйтесь назначенной пригласительной ссылкой.'
+                );
+            }, 400);
+        }
+    </script>
+</body>
+</html>
